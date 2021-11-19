@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 
 #include "../include/grille.h"
@@ -13,10 +14,13 @@ int main (int argc, char ** argv) {
 	}
 
 	grille g, gc;
-	init_grille_from_file(argv[1],&g);
+    char path[20] = "grilles/grille";
+    strcat(path, argv[1]);
+    strcat( path, ".txt");
+    init_grille_from_file(path,&g);
 	alloue_grille (g.nbl, g.nbc, &gc);
-	affiche_grille(g);
-	
+    
+	affiche_grille(g, 1, 1, 1);
 	debut_jeu(&g, &gc);
 
 	libere_grille(&g);

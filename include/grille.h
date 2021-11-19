@@ -2,7 +2,7 @@
  * \file grille.h
  * \brief Fonctions liée aux grilles
  * \version 1.0
- * \date 17 fevrier 2020
+ * \date 8 mars 2020
 */
 #ifndef __GRILLE_H
 #define __GRILLE_H
@@ -63,7 +63,7 @@ static inline void set_morte(int i, int j, grille g){g.cellules[i][j] = 0;}
  * \param [out] g Grille
  * \return 1 si vivante, 0 sinon
 */
-static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] == 1;}
+static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] > 0;}
 
 /*!
  * \brief Recopie gs dans gd
