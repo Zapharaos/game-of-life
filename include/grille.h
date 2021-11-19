@@ -1,8 +1,8 @@
 /*!
  * \file grille.h
  * \brief Fonctions liée aux grilles
- * \version 1.0
- * \date 8 mars 2020
+ * \version 3.0
+ * \date 31 mars 2020
 */
 #ifndef __GRILLE_H
 #define __GRILLE_H
@@ -57,13 +57,31 @@ static inline void set_vivante(int i, int j, grille g){g.cellules[i][j] = 1;}
 static inline void set_morte(int i, int j, grille g){g.cellules[i][j] = 0;}
 
 /*!
+ * \brief Rend la cellule (i,j) de la grille g non viable (= -1)
+ * \param [in] i Ligne de la cellule
+ * \param [in] j Colonne de la cellule
+ * \param [out] g Grille
+ * \return g [ i ][ j ] = -1
+*/
+static inline void set_non_viable(int i, int j, grille g){g.cellules[i][j] = -1;}
+
+/*!
  * \brief Teste si la cellule ( i , j ) de la grille g est vivante
  * \param [in] i Ligne de la cellule
  * \param [in] j Colonne de la cellule
  * \param [out] g Grille
  * \return 1 si vivante, 0 sinon
 */
-static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] > 0;}
+static inline int est_vivante(int i, int j, grille g){return g.cellules[i][j] >= 1;}
+
+/*!
+ * \brief Teste si la cellule ( i , j ) de la grille g est non viable
+ * \param [in] i Ligne de la cellule
+ * \param [in] j Colonne de la cellule
+ * \param [out] g Grille
+ * \return 1 si non viable, 0 sinon
+*/
+static inline int est_non_viable(int i, int j, grille g){return g.cellules[i][j] == -1;}
 
 /*!
  * \brief Recopie gs dans gd

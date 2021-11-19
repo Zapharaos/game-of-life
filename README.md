@@ -29,7 +29,7 @@ sudo apt install doxygen
 
 Then you can run the following :
 ~~~{.sh}
-doxygen Doxyfile
+make doxy
 ~~~
 
 ### Archiving :

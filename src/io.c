@@ -11,7 +11,9 @@ void affiche_trait (int c){
 void affiche_ligne (int c, int* ligne, int aging){
 	int i;
     for (i=0; i<c; ++i)
-            if (ligne[i] == 0 ) printf ("|   "); else printf ("| %d ", aging ? ligne[i] : 0);
+            if (ligne[i] == 0 ) printf ("|   ");
+            else if (ligne[i] == -1) printf ("| X ");
+            else printf ("| %d ", aging ? ligne[i] : 0);
 	printf("|\n");
 	return;
 }
@@ -46,7 +48,7 @@ void affiche_grille (grille g, int timer, int cycle, int aging){
 }
 
 void efface_grille (grille g){
-	printf("\n\e[%dA",g.nbl*2 + 5); 
+	printf("\n\e[%dA",g.nbl*2 + 5);
 }
 
 void debut_jeu(grille *g, grille *gc){

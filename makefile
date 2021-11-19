@@ -22,7 +22,7 @@ main: main.o jeu.o io.o grille.o
 
 dist:
 	@mkdir -p dist
-	tar -J -cvf dist/MatthieuFreitag-GoL-v2.0.tar.xz grilles include src makefile Doxyfile doc Niveaux README.md
+	tar -J -cvf dist/MatthieuFreitag-GoL-v3.0.tar.xz grilles include src makefile Doxyfile doc Niveaux README.md
 	@echo "\n----> Archivage effectué\n"
 clean:
 	rm -rf $(ODIR)

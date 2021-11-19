@@ -1,8 +1,8 @@
 /*!
  * \file jeu.h
  * \brief Fonctions liée aux cellules
- * \version 1.0
- * \date 8 mars 2020
+ * \version 3.0
+ * \date 31 mars 2020
 */
 
 #ifndef __JEU_H
