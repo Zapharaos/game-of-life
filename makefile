@@ -22,7 +22,7 @@ else
 	CFLAGS = $(CPPFLAGS)
 endif
 
-CFLAGS += -Wall -g -o
+CFLAGS += -Wall -g -ggdb -o
 
 vpath %.h $(IDIR)
 vpath %.c $(SDIR)
@@ -46,7 +46,7 @@ main: main.o jeu.o io.o grille.o
 
 dist:
 	@mkdir -p $(DDIR)
-	tar -J -cvf $(DDIR)/MatthieuFreitag-GoL-v5.0.tar.xz grilles include src lib makefile Doxyfile doc Niveaux README.md 
+	tar -J -cvf $(DDIR)/MatthieuFreitag-GoL-v5.1.tar.xz grilles include src lib makefile Doxyfile doc Niveaux README.md 
 	@echo "\n----> Archivage effectué\n"
 
 clean:

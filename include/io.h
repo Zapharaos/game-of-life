@@ -13,6 +13,7 @@
 #include "grille.h"
 #include "jeu.h"
 
+
 #if CAIRO
 
 #include <X11/Xlib.h>
