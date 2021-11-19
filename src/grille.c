@@ -61,3 +61,33 @@ void libere_grille (grille* g){
     }
     free((*g).cellules);
 }
+
+int egale_grille(grille g, grille g_bis){
+    int i, j, swing = 0;
+    for (i = 0; i < g.nbl; i++) {
+        for (j = 0; j < g.nbc; j++) {
+            if (g.cellules[i][j] == g_bis.cellules[i][j]) {
+                swing = 1;
+            }
+            else {
+                swing = 0;
+                return swing;
+            }
+        }
+    }
+    return swing;
+}
+
+int grille_vide(grille g) {
+    int i, j, vide = 1 ;
+    for (i = 0; i < g.nbl; i++) {
+        for (j = 0; j < g.nbc; j++) {
+            if ((g.cellules[i][j]) > 0) {
+                vide = 0;
+                return vide;
+            }
+        }
+    }
+    return vide;
+}
+

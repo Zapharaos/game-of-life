@@ -67,3 +67,4 @@ __________
 - n => Load a new grid from a number (1; 2; 3; 4; 5; 6; 7; 8)
 - c => Activate or deactivate the cyclic counting (with or without edges)
 - v => Activate or deactivate the aging
+- o =-> Test if the grid is oscillating

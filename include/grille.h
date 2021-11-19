@@ -1,7 +1,7 @@
 /*!
  * \file grille.h
  * \brief Fonctions liée aux grilles
- * \version 4.0
+ * \version 5.0
  * \date 31 mars 2020
 */
 #ifndef __GRILLE_H
@@ -89,5 +89,20 @@ static inline int est_non_viable(int i, int j, grille g){return g.cellules[i][j]
  * \param [in] gd Grille contenant la copie
 */
 void copie_grille (grille gs, grille gd);
+
+/*!
+ * \brief Test si les deux grilles sont les mêmes
+ * \param [in] g Grille 1 à comparer
+ * \param [in] g_bis Grille 2 à comparer
+ * \return 1 si elle sont égales, sinon 0
+ */
+int egale_grille(grille g, grille g_bis);
+
+/*!
+ * \brief Test si la grille est vide
+ * \param [in] g Grille à tester
+ * \return 1 si elle est vide, sinon 0
+*/
+int grille_vide(grille g);
 
 #endif

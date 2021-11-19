@@ -1,7 +1,7 @@
 /*!
  * \file io.h
  * \brief Entrées et sorties du programme
- * \version 4.0
+ * \version 5.0
  * \date 31 mars 2020
 */
 
@@ -88,8 +88,10 @@ void efface_grille (grille g);
  * \param [in] timer Indique le nombre d'étapes
  * \param [in] cycle Indique le mode cycle demandé
  * \param [in] aging Indique le mode vieillisement demandé
+ * \param [in] swing Indique le début de l'oscillation
+ * \param [in] swing Indique la fin de l'oscillation
 */
-void affiche_grille (grille g, int timer, int cycle, int aging);
+void affiche_grille (grille g, int timer, int cycle, int aging, int swing, int count);
 
 /*!
  * \brief Debute le jeu

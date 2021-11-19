@@ -30,7 +30,7 @@ int main (int argc, char ** argv) {
         cairo_close_x11_surface();
     
     #else
-        affiche_grille(g, 1, 1, 1);
+        affiche_grille(g, 1, 1, 1, 0, 0);
         debut_jeu(&g, &gc);
     
     #endif
