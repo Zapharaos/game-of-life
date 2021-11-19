@@ -1,7 +1,7 @@
 /*!
  * \file grille.h
  * \brief Fonctions liée aux grilles
- * \version 3.0
+ * \version 4.0
  * \date 31 mars 2020
 */
 #ifndef __GRILLE_H

@@ -1,4 +1,4 @@
-#include "../include/jeu.h"
+#include "jeu.h"
 
 int compte_voisins_vivants_cyclique (int i, int j, grille g){
 	int v = 0, l=g.nbl, c = g.nbc;
@@ -16,12 +16,6 @@ int compte_voisins_vivants_cyclique (int i, int j, grille g){
 
 int compte_voisins_vivants_non_cyclique (int i, int j, grille g){
    int v = 0, l=g.nbl, c = g.nbc;
-
-   // if (i != l && j != c && i != 0 && j != 0) {
-        // la cellule n'est pas dans un angle de la grille
-   // } else if (i != l && i != 0) {
-        // la cellule n'est ni dans un angle ni sur une ligne d'extrémité
-   // } else if (j != c) {
 
    v+= (i-1 >= 0 && j-1 >= 0) ? est_vivante(i-1,j-1,g) : 0;
    v+= (i-1 >= 0) ? est_vivante(i-1,j,g) : 0;

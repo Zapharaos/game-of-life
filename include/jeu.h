@@ -1,7 +1,7 @@
 /*!
  * \file jeu.h
  * \brief Fonctions liée aux cellules
- * \version 3.0
+ * \version 4.0
  * \date 31 mars 2020
 */
 
